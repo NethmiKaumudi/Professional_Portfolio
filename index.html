@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assests/lib/fontawesome-free-6.4.0-web/css/all.min.css">
 
 </head>
-<body>
+<body onload="loading()">
+<div id="loader"></div>
 <div id="header">
     <div class="container">
         <nav>
@@ -27,8 +28,8 @@
             </ul>
         </nav>
         <div class="header_text">
-            <p>Full-Stack Developer</p>
-            <h1>Hi ,I'm <span>Nethmi Kaumudi </span> <br>From Sri Lanka</h1>
+            <h1>Hi ,I'm <span data-text="NethmiKaumudi">NethmiKaumudi </span> <br>From Sri Lanka</h1>
+            <p> I am a <span class="multiText" style="color:#00ADB5"></span></p>
         </div>
         <img src="assests/images/myImageBack.png" alt="Header Image" class="header_image">
 
@@ -240,10 +241,13 @@
 
     </div>
     <div class="copyright">
-        <p>Copyright <i class="fa-regular fa-copyright"></i> NethmiKaumudi.Made with <i class="fa-solid fa-heart" id="heart"></i>
+        <p>Copyright <i class="fa-regular fa-copyright"></i> NethmiKaumudi.Made with <i class="fa-solid fa-heart"
+                                                                                        id="heart"></i>
             by NK</p>
     </div>
 </div>
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
 <script>
     var tabLinks = document.getElementsByClassName("tab-links");
     var tabContents = document.getElementsByClassName("tab-contents");
@@ -273,7 +277,18 @@
             loadMoreBtn.style.display = 'none';
         }
     }
+    var typed = new Typed(".multiText", {
+        strings: ["Full Stack Developer", "Mobile Application Developer", "Web Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 0,
+        loop: true
+    });
+    let preLoader = document.getElementById('loader');
 
+    function loading() {
+        preLoader.style.display = 'none';
+    }
 </script>
 </body>
 </html>
