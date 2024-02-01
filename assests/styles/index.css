@@ -665,7 +665,7 @@ form .btn2 {
 
     .header_text {
         position: absolute;
-        top: 30%; /* Center vertically */
+        top: 24%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%); /* Center both horizontally and vertically */
         font-size: 20px;
@@ -689,7 +689,8 @@ form .btn2 {
     .about-col-2 {
         font-size: 14px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
@@ -788,7 +789,8 @@ form .btn2 {
     .about-col-2 {
         font-size: 14px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
@@ -829,11 +831,47 @@ form .btn2 {
 }
 
 @media all and (min-width: 0px) and (max-width: 320px) {
+    nav .icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #00ADB5;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s ease; /* Add transition for smooth animation */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav #icon {
+        position: absolute;
+        top: 46px;
+        right: 25px;
+        cursor: pointer;
+    }
+
     /*@media only screen and (max-width: 425px) {*/
     .header_image {
         position: absolute;
-        top: 18%; /* Center vertically */
-        right: -59%;
+        top: 22%; /* Center vertically */
+        right: -80%;
         transform: translate(-50%, 50%); /* Center horizontally and vertically */
         width: 400px;
         height: 350px;
@@ -841,16 +879,16 @@ form .btn2 {
 
     .header_text {
         position: absolute;
-        top: 30%; /* Center vertically */
+        top: 25%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
         width: 100%;
     }
 
     .header_text h1 {
-        font-size: 30px;
+        font-size: 25px;
         margin-top: 30px;
     }
 
@@ -863,16 +901,17 @@ form .btn2 {
     }
 
     .about-col-2 {
-        font-size: 14px;
+        font-size: 13px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
-        margin-right: 20px;
+        margin-right: 25px;
     }
 
     .work-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         grid-gap: 40px;
         margin-top: 50px;
     }
@@ -883,6 +922,7 @@ form .btn2 {
 
     .contact-right, .contact-left {
         flex-basis: 100%;
+        font-size: 15px;
     }
 
     .copyright {
