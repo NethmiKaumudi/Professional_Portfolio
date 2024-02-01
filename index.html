@@ -294,16 +294,17 @@
         preLoader.style.display = 'none';
     }
 
-    var sideMenu = document.getElementById("sideMenu");
 
-    function showMenu() {
-        sideMenu.style.right = "0";
-    }
+</script>
+<script>var sideMenu = document.getElementById("sideMenu");
 
-    function closeMenu() {
-        sideMenu.style.right = "-200";
-    }
+function showMenu() {
+    sideMenu.style.right = "0";
+}
 
+function closeMenu() {
+    sideMenu.style.right = "-200px"; // Make sure to include the unit (e.g., "px")
+}
 </script>
 </body>
 </html>

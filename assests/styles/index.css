@@ -749,7 +749,7 @@ form .btn2 {
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-        transition: right 0.3s ease; /* Add transition for smooth animation */
+        transition: right 0.5s ease; /* Add transition for smooth animation */
     }
 
     nav ul li {
@@ -849,41 +849,6 @@ form .btn2 {
 }
 
 @media all and (min-width: 0px) and (max-width: 320px) {
-    nav .icon {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #00ADB5;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.3s ease; /* Add transition for smooth animation */
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .icon {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-
-    nav #icon {
-        position: absolute;
-        top: 46px;
-        right: 25px;
-        cursor: pointer;
-    }
     /*@media only screen and (max-width: 425px) {*/
     .header_image {
         position: absolute;
