@@ -12,7 +12,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: var(--main-background-color);
     color: var(--main-text-color);
@@ -563,7 +565,7 @@ form .btn2 {
 
     .header_text {
         position: absolute;
-        top: 10%; /* Center vertically */
+        top: 8%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%); /* Center both horizontally and vertically */
         font-size: 20px;
@@ -901,11 +903,11 @@ form .btn2 {
     }
 
     .about-col-2 {
-        font-size: 13px;
+        font-size: 13.5px;
     }
 
     .tab-links {
-        font-size: 16px;
+        font-size: 17px;
         margin-right: 25px;
     }
 
@@ -930,3 +932,8 @@ form .btn2 {
     }
 }
 
+#msg{
+    color: #00ADB5;
+    margin-top: -5px;
+    display: block;
+}

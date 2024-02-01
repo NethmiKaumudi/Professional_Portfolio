@@ -17,7 +17,6 @@
 <div id="header">
     <div class="container">
         <nav>
-            <!--            <img src="nkLogo.png" class="logo"/>-->
             <h1 style="font-size: 50px"><Span style="color: #00ADB5">N</Span>K.</h1>
             <ul id="sideMenu">
                 <li><a href="#header">Home</a></li>
@@ -233,13 +232,14 @@
                 <a href="NethmiKaumudi%20CV.pdf" download="NethmiKaumudi CV.pdf" class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
 
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
 
@@ -306,5 +306,30 @@ function closeMenu() {
     sideMenu.style.right = "-200px"; // Make sure to include the unit (e.g., "px")
 }
 </script>
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2LyxHScVn9eZTHehlSDdO7YGoTRzcqMs8WAgqsOfvLv0Ku2aA6A-4LKJiOXeU3AS4/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault(); // Prevent the default form submission
+
+        fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully";
+                setTimeout(function () {
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                msg.innerHTML = "Error Sending Message";
+            });
+    });
+</script>
+
 </body>
 </html>
