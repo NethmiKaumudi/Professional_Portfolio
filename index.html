@@ -19,13 +19,15 @@
         <nav>
             <!--            <img src="nkLogo.png" class="logo"/>-->
             <h1 style="font-size: 50px"><Span style="color: #00ADB5">N</Span>K.</h1>
-            <ul>
+            <ul id="sideMenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="icon fa-solid fa-xmark" onclick="closeMenu"></i>
             </ul>
+            <i class="icon fa-solid fa-bars" id="icon" onclick="showMenu"></i>
         </nav>
         <div class="header_text">
             <h1>Hi ,I'm <span data-text="NethmiKaumudi">NethmiKaumudi </span> <br>From Sri Lanka</h1>
@@ -291,6 +293,17 @@
     function loading() {
         preLoader.style.display = 'none';
     }
+
+    var sideMenu = document.getElementById("sideMenu");
+
+    function showMenu() {
+        sideMenu.style.right = "0";
+    }
+
+    function closeMenu() {
+        sideMenu.style.right = "-200";
+    }
+
 </script>
 </body>
 </html>

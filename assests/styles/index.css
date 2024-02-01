@@ -170,6 +170,10 @@ nav ul li a:hover {
     }
 }
 
+nav .icon {
+    display: none;
+}
+
 /*..................About me................*/
 #about {
     padding: 80px 0;
@@ -613,7 +617,43 @@ form .btn2 {
 /*css for small screens*/
 /*mobile large*/
 @media all and (min-width: 425px) and (max-width: 642px) {
-/*@media only screen and (max-width: 425px) {*/
+    /*@media only screen and (max-width: 425px) {*/
+    nav .icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #00ADB5;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease; /* Add transition for smooth animation */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav #icon {
+        position: absolute;
+        top: 46px;
+        right: 25px;
+        cursor: pointer;
+    }
+
     .header_image {
         position: absolute;
         top: 18%; /* Center vertically */
@@ -691,9 +731,45 @@ form .btn2 {
         margin-left: 36px;
     }
 }
+
 /*mobile medium*/
 @media all and (min-width: 375px) and (max-width: 425px) {
     /*@media only screen and (max-width: 425px) {*/
+    nav .icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #00ADB5;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease; /* Add transition for smooth animation */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav #icon {
+        position: absolute;
+        top: 46px;
+        right: 25px;
+        cursor: pointer;
+    }
     .header_image {
         position: absolute;
         top: 18%; /* Center vertically */
@@ -771,7 +847,43 @@ form .btn2 {
         margin-left: 36px;
     }
 }
+
 @media all and (min-width: 0px) and (max-width: 320px) {
+    nav .icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #00ADB5;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease; /* Add transition for smooth animation */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav #icon {
+        position: absolute;
+        top: 46px;
+        right: 25px;
+        cursor: pointer;
+    }
     /*@media only screen and (max-width: 425px) {*/
     .header_image {
         position: absolute;
@@ -850,3 +962,4 @@ form .btn2 {
         margin-left: 36px;
     }
 }
+
